@@ -1,0 +1,23 @@
+<header>
+    <button (click)="getBack()">&#8592; Back</button>
+    <h1>{{recipeDetail?.title}}</h1>
+</header>
+
+<div class="wrapper">
+    <div class="left">
+        <img [src]="recipeDetail?.image" alt="">
+        <h3>Dish types: </h3>
+        <div class="dish-types">
+            <div class="type" *ngFor="let type of recipeDetail?.dishTypes">
+                <span class="dish-type">{{type}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <h3>Summary:</h3>
+        <p [innerHtml]="recipeDetail?.summary"></p>
+        <h3>Ready in <span style="color: rgb(230, 16, 16); font-size: 25px;">{{recipeDetail?.readyInMinutes}}</span>
+            minutes</h3>
+        <h3>Servings: <span style="color: rgb(230, 16, 16); font-size: 25px;">{{recipeDetail?.servings}}</span></h3>
+    </div>
+</div>

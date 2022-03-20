@@ -1,0 +1,21 @@
+<nav>
+    <div class="tags">
+        <h3 (click)="typeSearch(type)" *ngFor="let type of types">{{type}}</h3>
+    </div>
+    <div class="search-div">
+        <input type="text" placeholder="Search recipes..." [(ngModel)]="search_query" (keyup)="searchRecipes()">
+
+    </div>
+</nav>
+<main>
+    <div class="cards">
+        <div class="card" (click)="showDetails(item.id)" *ngFor="let item of response">
+            <div class="image">
+                <img [src]="item.image" alt="">
+            </div>
+            <div class="title-price">
+                <h3>{{item.title}}</h3>
+            </div>
+        </div>
+    </div>
+</main>

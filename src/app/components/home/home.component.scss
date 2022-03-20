@@ -1,0 +1,86 @@
+main{
+    width: 1370px;
+    margin: auto;
+    .cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow-y: hidden;
+        .card{
+            width: 250px;
+            margin: 10px;
+            border: 1px solid rgb(194, 194, 194);
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 6px;
+            box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.5);
+            &:hover{
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+                // background-color: rgb(230, 230, 230);
+                box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
+            }
+            img{
+                width: 100%;
+                // margin-left: -1px;
+                border-radius: 6px 6px 0 0;
+            }
+            .title-price{
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin: 5px;
+                overflow-y: hidden;
+                h2,h3{
+                    margin: 0;
+                    padding: 0;
+                }
+                h2{
+                    color: #118811;
+                }
+            }
+        }
+    }
+}
+nav{
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .tags{
+        display: flex;
+        flex-direction: row;
+        h3{
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: rgba(0,0,0,0.5);
+            border: 1px solid rgba(0,0,0,0.5);
+            &:hover{
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+            }
+        }
+    }
+    .search-div{
+        input{
+            border: 0;
+            outline: none;
+            border-bottom: 1px solid rgba(0,0,0,0.5);
+            padding: 7px;
+            font-size: 16px;
+        }
+    }
+}
